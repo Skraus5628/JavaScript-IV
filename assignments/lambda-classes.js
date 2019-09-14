@@ -36,28 +36,22 @@ class Person {
 //   * `grade` receives a `student` object and a `subject` string as arguments and logs out '{student.name} receives a perfect score on {subject}'
 
 class Instructor extends Person {
-    constructor(name) {
-        this.specialty=specialty;
-        this.language=language;
-        this.catchPhrase=catchPhrase;
-
-      super(name, age, location);
-    }
-    
-    specialty(){
-        return `${this.name} is good at ${this.specialty}`
+    constructor(instructorOptions) {
+      super(instructorOptions);
+        this.specialty=instructorOptions.specialty;
+        this.language=instructorOptions.language;
+        this.catchPhrase=instructorOptions.catchPhrase;
     }
 
-
-    speak() {
-      console.log(`${this.name} barks!`);
-    }
+    demo(subject) {
+      return `Today we are learning about ${subject}.`;
+  }
+  grade(student,subject) {
+      return `${student.name} receives a perfect score on ${subject}`;
   }
 
-
-
-
-
+  }
+  
 // #### Student
 
 // * Now we need some students!
