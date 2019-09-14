@@ -37,9 +37,18 @@ class Person {
 
 class Instructor extends Person {
     constructor(name) {
-      super(name);
+        this.specialty=specialty;
+        this.language=language;
+        this.catchPhrase=catchPhrase;
+
+      super(name, age, location);
     }
-  
+    
+    specialty(){
+        return `${this.name} is good at ${this.specialty}`
+    }
+
+
     speak() {
       console.log(`${this.name} barks!`);
     }
